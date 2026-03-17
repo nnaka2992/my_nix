@@ -19,6 +19,7 @@
           default = pkgs.buildEnv {
             name = "user-packages";
             paths = with pkgs; [
+              codex
               mise
             ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
               podman
